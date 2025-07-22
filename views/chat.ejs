@@ -1,0 +1,13 @@
+<%- include("partials/header") %>
+<div class="container mt-4">
+  <h3>Start a Chat</h3>
+  <ul class="list-group">
+    <% users.forEach(user => { %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <%= user.username %>
+        <a href="/messages/chat/<%= user._id %>" class="btn btn-sm btn-success">Chat</a>
+      </li>
+    <% }) %>
+  </ul>
+</div>
+<%- include("partials/footer") %>
